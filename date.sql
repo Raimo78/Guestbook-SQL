@@ -1,0 +1,1 @@
+INSERT INTO yourtable (`DateTimeFieldName`) VALUES (NOW());
