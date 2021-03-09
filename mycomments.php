@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
 <meta name="description" content="Free App">
@@ -9,18 +10,11 @@
 <title>Guestbook System Comments App</title>
 <link rel="stylesheet" type="text/css" href="CSS/comments.css">
 <link rel="stylesheet" type="text/css" href="CSS/likeme.css">
-<script src="jquery-3.5.1.min.js"></script>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-
+<link rel="stylesheet" href="CSS/calendar.css">
+<script src="js/calender.js"></script>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/mycommentstime.js"></script>
+<script src="js/mycommentsnav.js"></script>
 </head>
 
 <body>
@@ -28,19 +22,6 @@ function closeNav() {
 <body onload="myFunction()" style="margin:0;">
 
 <div id="loader"></div>
-
-<script>
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
 
 <div class="about-section">
   <h1>Guestbook System Comments App</h1>
@@ -93,6 +74,45 @@ function showPage() {
 				<img src="LoaderIcon.gif" id="loader" />
 			</div>
 		</form>
+  
+    <div class="about">
+      <h1 style="color:blue;">Employee project datebook</h1>
+      <h1 style="font-size:50%;">Employee project datebook</h1>
+    <div id="calPeriod"><?php
+    
+    $months = [
+      1 => "January", 2 => "Febuary", 3 => "March", 4 => "April",
+      5 => "May", 6 => "June", 7 => "July", 8 => "August",
+      9 => "September", 10 => "October", 11 => "November", 12 => "December"
+    ];
+    $monthNow = date("m");
+    echo "<select id='calmonth'>";
+    foreach ($months as $m=>$mth) {
+      printf("<option value='%s'%s>%s</option>", 
+        $m, $m==$monthNow?" selected":"", $mth
+      );
+    }
+    echo "</select>";
+
+    echo "<input type='number' id='calyear' value='".date("Y")."'/>";
+  ?></div>
+
+  <div id="calwrap"></div>
+
+  <div id="calblock"><form id="calform">
+    <input type="hidden" id="evtid"/>  
+    <label for="start">Date Start</label>
+    <input type="date" id="evtstart" required/>
+    <label for="end">Date End</label>
+    <input type="date" id="evtend" required/>
+    <label for="txt">Event</label>
+    <textarea id="evttxt" required></textarea>
+    <label for="color">Color</label>
+    <input type="color" id="evtcolor" required/>
+    <input type="submit" id="calformsave" value="Save"/>
+    <input type="button" id="calformdel" value="Delete"/>
+    <input type="button" id="calformcx" value="Cancel"/>
+  </form></div>
 
 <?php
 
@@ -173,7 +193,7 @@ while ($row = $result->fetch_array(MYSQLI_ASSOC))
             <img src="ehdokas3.jpg" alt="Raimo" class="responsive" width="600" height="400"> 
 						<div class="comment-details">
 							<span class="comment-name">Raimo Jämsén</span>
-							<span class="comment-date">Feb 18, 2021</span>
+							<span class="comment-date">Feb 28, 2021</span>
 							<p>This is the first reply to this post on this website.</p>
 							<a class="reply-btn" href="mycomments.php" >reply</a>
 						</div>
