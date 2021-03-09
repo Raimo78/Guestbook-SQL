@@ -1,0 +1,258 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+	Font-size: 0.95em;
+	
+}
+
+.demo-container {
+    background-color: #FFF;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+#frmComment {
+	padding: 20px;
+}
+
+#comment-count {
+    border-bottom: 1px solid #F0F0F0;
+    border-top: 1px solid #F0F0F0;
+    padding: 8px;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.comment-row {
+    border-bottom: 1px solid #F0F0F0;
+    padding: 10px 0px;
+    line-height: 25px;
+}    
+    
+.delete {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.85em;
+    color: red;
+}
+
+.edit {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.85em;
+    color: blue;
+}
+
+.btn-add-comment {
+	font-size: 1em;
+    padding: 8px 30px;
+    background-color: #089cbd;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+    border: #0495b1 1px solid;
+
+}
+.form-field {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    margin: 5px 0px 15px 0px;
+}
+
+.demo-container .row {
+    margin-bottom:15px;
+}
+.comment-user {
+    color: #868686;
+    font-size: 0.9em;
+}
+.error {
+    color: red;
+}
+img#loader {
+    vertical-align: middle;
+    width: 45px;
+    display: none;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: yellow;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: yellow;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  #loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid blue;
+    border-radius: 50%;
+    border-top: 16px solid yellow;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+  #myDiv {
+    display: none;
+    text-align: center;
+  }
+  
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border: 3px solid green; 
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: blue;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: none;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6.5%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+ }
